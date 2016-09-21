@@ -14,64 +14,67 @@ As outlined below, some user stories have been implemented by instructors. Other
 
 ### Story 1
 
-When I visit `/units`
-I see a list of units
+* When I visit `/units`
+* I see a list of units
 
 ### Story 2
 
-When I visit `/renters`
-I see a list of renters
-with the unit that they rent
+* When I visit `/renters`
+* I see a list of renters
+* with the unit that they rent
 
 ### Story 3
 
-When I visit `/owners`
-I see a list of owners
-with a list of the units that they own
+* When I visit `/owners`
+* I see a list of owners
+* with a list of the units that they own
 
 ### Existing Relationships
 
-owners have_many units
-units belong_to owners
+#### Owners and Units
 
-units belong_to renters
-renters has_one unit
+* owners have_many units
+* units belong_to owners
+
+#### Units and Renters
+* units belong_to renters
+* renters has_one unit
 
 ## Student Stories (To Be Implemented)
 
 ### Story 1
 
-When I visit `/units`
-I see a list of units
-with their square footage
-their monthly rent
-and their cost per square foot
+* When I visit `/units`
+* I see a list of units
+* with their square footage
+* their monthly rent
+* and their cost per square foot
 
 ### Story 2
 
-When I visit `/owners`
-I see a list of owners
-with a list of the units that they own
-if I click on an owner's name
-then I see a page with the owner's name
-and a list of the units they own
-with the monthly rent for each unit
-And the total monthly rent that the owner expects to collect if all of their apartments are rented and the renters are paying
+* When I visit `/owners`
+* I see a list of owners
+* with a list of the units that they own
+* if I click on an owner's name
+* then I see a page with the owner's name
+* and a list of the units they own
+* with the monthly rent for each unit
+* And the total monthly rent that the owner expects to collect if all of their apartments are rented and the renters are paying
 
 ### Story 3
 
-When I visit `/renters`
-I see a list of renters
-their monthly rent
-the cost per square foot that they pay
-and the average cost per square foot for all renters
+* When I visit `/renters`
+* I see a list of renters
+* their monthly rent
+* the cost per square foot that they pay
+* and the average cost per square foot for all renters
 
 ### Story 4
 
 Background: an owner exists
 
-When I visit `/units/new`
-and I enter a unit name
-and I select an owner from a dropdown
-and I hit submit
-I am shown a page with the unit name and the owner's name
+* When I visit `/units/new`
+* and I enter a unit name
+* and I select an owner from a dropdown
+* and I hit submit
+* I am shown a page with the unit name and the owner's name
