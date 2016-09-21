@@ -1,0 +1,1750 @@
+  [1m[35m (118.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (360.3ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (25.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 03:39:21 UTC], ["updated_at", 2016-09-21 03:39:21 UTC]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (11.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (116.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (457.3ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 03:39:51 UTC], ["updated_at", 2016-09-21 03:39:51 UTC]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (121.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (342.8ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "units" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160921034017')[0m
+  [1m[35m (20.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 03:42:07 UTC], ["updated_at", 2016-09-21 03:42:07 UTC]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (17.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:42:07 UTC], ["updated_at", 2016-09-21 03:42:07 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:42:07 UTC], ["updated_at", 2016-09-21 03:42:07 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/unitis" for 127.0.0.1 at 2016-09-20 21:42:07 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:43:11 UTC], ["updated_at", 2016-09-21 03:43:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:43:11 UTC], ["updated_at", 2016-09-21 03:43:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:43:11 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:43:39 UTC], ["updated_at", 2016-09-21 03:43:39 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:43:39 UTC], ["updated_at", 2016-09-21 03:43:39 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:43:39 -0600
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:44:01 UTC], ["updated_at", 2016-09-21 03:44:01 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:44:01 UTC], ["updated_at", 2016-09-21 03:44:01 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:44:01 -0600
+Processing by UnitsController#index as HTML
+Completed 406 Not Acceptable in 36ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:44:54 UTC], ["updated_at", 2016-09-21 03:44:54 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:44:54 UTC], ["updated_at", 2016-09-21 03:44:54 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:44:54 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  Rendered units/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 272ms (Views: 270.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:45:33 UTC], ["updated_at", 2016-09-21 03:45:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:45:33 UTC], ["updated_at", 2016-09-21 03:45:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:45:33 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  Rendered units/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 177ms (Views: 175.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:46:23 UTC], ["updated_at", 2016-09-21 03:46:23 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:46:23 UTC], ["updated_at", 2016-09-21 03:46:23 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:46:23 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  Rendered units/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:46:43 UTC], ["updated_at", 2016-09-21 03:46:43 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:46:43 UTC], ["updated_at", 2016-09-21 03:46:43 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:46:43 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 153ms (Views: 151.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:47:07 UTC], ["updated_at", 2016-09-21 03:47:07 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:47:07 UTC], ["updated_at", 2016-09-21 03:47:07 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:47:07 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 143ms (Views: 141.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:47:57 UTC], ["updated_at", 2016-09-21 03:47:57 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:47:57 UTC], ["updated_at", 2016-09-21 03:47:57 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:47:57 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 141ms (Views: 139.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:49:34 UTC], ["updated_at", 2016-09-21 03:49:34 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:49:34 UTC], ["updated_at", 2016-09-21 03:49:34 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:49:34 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 137ms (Views: 135.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:52:43 UTC], ["updated_at", 2016-09-21 03:52:43 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:52:43 UTC], ["updated_at", 2016-09-21 03:52:43 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:52:43 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 162ms (Views: 159.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:53:20 UTC], ["updated_at", 2016-09-21 03:53:20 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:53:20 UTC], ["updated_at", 2016-09-21 03:53:20 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:53:20 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 163ms (Views: 161.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (119.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (330.5ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "renters" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "units" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160921035410')[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160921034017');
+
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 03:54:53 UTC], ["updated_at", 2016-09-21 03:54:53 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 03:54:53 UTC], ["updated_at", 2016-09-21 03:54:53 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 03:54:53 UTC], ["updated_at", 2016-09-21 03:54:53 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:54:53 UTC], ["updated_at", 2016-09-21 03:54:53 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:54:53 UTC], ["updated_at", 2016-09-21 03:54:53 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:54:53 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 168ms (Views: 166.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 03:55:24 UTC], ["updated_at", 2016-09-21 03:55:24 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 03:55:24 UTC], ["updated_at", 2016-09-21 03:55:24 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:55:24 UTC], ["updated_at", 2016-09-21 03:55:24 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:55:24 UTC], ["updated_at", 2016-09-21 03:55:24 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:55:24 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 141ms (Views: 139.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (116.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (325.5ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "renters" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "units" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "renter_id" integer)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_units_on_renter_id" ON "units" USING btree ("renter_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "units" ADD CONSTRAINT "fk_rails_74258f6c4d"
+FOREIGN KEY ("renter_id")
+  REFERENCES "renters" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160921035635')[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160921034017'), ('20160921035410');
+
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 03:57:03 UTC], ["updated_at", 2016-09-21 03:57:03 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 03:57:03 UTC], ["updated_at", 2016-09-21 03:57:03 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 03:57:03 UTC], ["updated_at", 2016-09-21 03:57:03 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."renter_id" = $1 LIMIT $2[0m  [["renter_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:57:03 UTC], ["updated_at", 2016-09-21 03:57:03 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 03:57:03 UTC], ["updated_at", 2016-09-21 03:57:03 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 21:57:03 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 166ms (Views: 163.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 03:57:43 UTC], ["updated_at", 2016-09-21 03:57:43 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 03:57:43 UTC], ["updated_at", 2016-09-21 03:57:43 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."renter_id" = $1 LIMIT $2[0m  [["renter_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "renter_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 03:58:53 UTC], ["updated_at", 2016-09-21 03:58:53 UTC], ["renter_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" ORDER BY "units"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT  "units".* FROM "units" ORDER BY "units"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:00:15 UTC], ["updated_at", 2016-09-21 04:00:15 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:00:15 UTC], ["updated_at", 2016-09-21 04:00:15 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."renter_id" = $1 LIMIT $2[0m  [["renter_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "renter_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:00:53 UTC], ["updated_at", 2016-09-21 04:00:53 UTC], ["renter_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (12.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:02:10 UTC], ["updated_at", 2016-09-21 04:02:10 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" ORDER BY "units"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:03:27 UTC], ["updated_at", 2016-09-21 04:03:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:03:27 UTC], ["updated_at", 2016-09-21 04:03:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "renter_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:03:42 UTC], ["updated_at", 2016-09-21 04:03:42 UTC], ["renter_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" ORDER BY "units"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRenter Load (0.2ms)[0m  [1m[34mSELECT  "renters".* FROM "renters" WHERE "renters"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:05:58 UTC], ["updated_at", 2016-09-21 04:05:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:05:58 UTC], ["updated_at", 2016-09-21 04:05:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:05:58 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.9ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 157ms (Views: 154.8ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:06:55 UTC], ["updated_at", 2016-09-21 04:06:55 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:06:55 UTC], ["updated_at", 2016-09-21 04:06:55 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "renter_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:06:55 UTC], ["updated_at", 2016-09-21 04:06:55 UTC], ["renter_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "renter_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:06:55 UTC], ["updated_at", 2016-09-21 04:06:55 UTC], ["renter_id", 12]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:06:55 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:06:55 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 148ms (Views: 145.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (118.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (358.9ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "renters" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "unit_id" integer)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_renters_on_unit_id" ON "renters" USING btree ("unit_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "units" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "renters" ADD CONSTRAINT "fk_rails_fa584f0808"
+FOREIGN KEY ("unit_id")
+  REFERENCES "units" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160921040825')[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160921034017'), ('20160921035410');
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 04:08:58 UTC], ["updated_at", 2016-09-21 04:08:58 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:08:58 UTC], ["updated_at", 2016-09-21 04:08:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:08:58 UTC], ["updated_at", 2016-09-21 04:08:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:08:58 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 166ms (Views: 164.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:10:06 UTC], ["updated_at", 2016-09-21 04:10:06 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:10:06 UTC], ["updated_at", 2016-09-21 04:10:06 UTC], ["unit_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:10:06 UTC], ["updated_at", 2016-09-21 04:10:06 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:10:06 UTC], ["updated_at", 2016-09-21 04:10:06 UTC], ["unit_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:10:06 -0600
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:10:06 UTC], ["updated_at", 2016-09-21 04:10:06 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:10:06 UTC], ["updated_at", 2016-09-21 04:10:06 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:10:06 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 176ms (Views: 173.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:10:37 UTC], ["updated_at", 2016-09-21 04:10:37 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:10:37 UTC], ["updated_at", 2016-09-21 04:10:37 UTC], ["unit_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:10:37 UTC], ["updated_at", 2016-09-21 04:10:37 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:10:37 UTC], ["updated_at", 2016-09-21 04:10:37 UTC], ["unit_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:10:37 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:10:37 UTC], ["updated_at", 2016-09-21 04:10:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:10:37 UTC], ["updated_at", 2016-09-21 04:10:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:10:37 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 179ms (Views: 176.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:11:06 UTC], ["updated_at", 2016-09-21 04:11:06 UTC]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:11:06 UTC], ["updated_at", 2016-09-21 04:11:06 UTC], ["unit_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:11:06 UTC], ["updated_at", 2016-09-21 04:11:06 UTC]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:11:06 UTC], ["updated_at", 2016-09-21 04:11:06 UTC], ["unit_id", 10]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:11:06 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:11:06 UTC], ["updated_at", 2016-09-21 04:11:06 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:11:06 UTC], ["updated_at", 2016-09-21 04:11:06 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:11:06 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 155ms (Views: 153.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:11:28 UTC], ["updated_at", 2016-09-21 04:11:28 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:11:28 UTC], ["updated_at", 2016-09-21 04:11:28 UTC], ["unit_id", 13]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:11:28 UTC], ["updated_at", 2016-09-21 04:11:28 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:11:28 UTC], ["updated_at", 2016-09-21 04:11:28 UTC], ["unit_id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:11:28 -0600
+Processing by RentersController#index as HTML
+Completed 406 Not Acceptable in 35ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:11:28 UTC], ["updated_at", 2016-09-21 04:11:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:11:28 UTC], ["updated_at", 2016-09-21 04:11:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:11:28 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 151ms (Views: 149.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:12:03 UTC], ["updated_at", 2016-09-21 04:12:03 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:12:03 UTC], ["updated_at", 2016-09-21 04:12:03 UTC], ["unit_id", 17]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:12:03 UTC], ["updated_at", 2016-09-21 04:12:03 UTC]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:12:03 UTC], ["updated_at", 2016-09-21 04:12:03 UTC], ["unit_id", 18]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:12:03 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  Rendered renters/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 142ms (Views: 140.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:12:03 UTC], ["updated_at", 2016-09-21 04:12:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:12:03 UTC], ["updated_at", 2016-09-21 04:12:03 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:12:03 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:13:33 UTC], ["updated_at", 2016-09-21 04:13:33 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:13:33 UTC], ["updated_at", 2016-09-21 04:13:33 UTC], ["unit_id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:13:33 UTC], ["updated_at", 2016-09-21 04:13:33 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:13:33 UTC], ["updated_at", 2016-09-21 04:13:33 UTC], ["unit_id", 22]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:13:33 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  Rendered renters/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:13:33 UTC], ["updated_at", 2016-09-21 04:13:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:13:33 UTC], ["updated_at", 2016-09-21 04:13:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:13:33 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 148ms (Views: 146.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:13:58 UTC], ["updated_at", 2016-09-21 04:13:58 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:13:58 UTC], ["updated_at", 2016-09-21 04:13:58 UTC], ["unit_id", 25]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:13:58 UTC], ["updated_at", 2016-09-21 04:13:58 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:13:58 UTC], ["updated_at", 2016-09-21 04:13:58 UTC], ["unit_id", 26]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:13:58 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 157ms (Views: 153.6ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:13:59 UTC], ["updated_at", 2016-09-21 04:13:59 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:13:59 UTC], ["updated_at", 2016-09-21 04:13:59 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:13:59 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:20:57 UTC], ["updated_at", 2016-09-21 04:20:57 UTC]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:20:57 UTC], ["updated_at", 2016-09-21 04:20:57 UTC], ["unit_id", 29]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:20:57 UTC], ["updated_at", 2016-09-21 04:20:57 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:20:57 UTC], ["updated_at", 2016-09-21 04:20:57 UTC], ["unit_id", 30]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:20:57 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.1ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.1ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 165ms (Views: 163.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:20:57 UTC], ["updated_at", 2016-09-21 04:20:57 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:20:57 UTC], ["updated_at", 2016-09-21 04:20:57 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:20:57 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:21:31 UTC], ["updated_at", 2016-09-21 04:21:31 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:21:31 UTC], ["updated_at", 2016-09-21 04:21:31 UTC], ["unit_id", 33]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:21:31 UTC], ["updated_at", 2016-09-21 04:21:31 UTC]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:21:31 UTC], ["updated_at", 2016-09-21 04:21:31 UTC], ["unit_id", 34]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:21:31 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.1ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 166ms (Views: 163.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:21:31 UTC], ["updated_at", 2016-09-21 04:21:31 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:21:31 UTC], ["updated_at", 2016-09-21 04:21:31 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:21:31 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (120.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (378.4ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "owners" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "renters" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "unit_id" integer)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_renters_on_unit_id" ON "renters" USING btree ("unit_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "units" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "renters" ADD CONSTRAINT "fk_rails_fa584f0808"
+FOREIGN KEY ("unit_id")
+  REFERENCES "units" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160921042201')[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160921034017'), ('20160921035410'), ('20160921040825');
+
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC], ["unit_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC], ["unit_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:22:37 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.6ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 189ms (Views: 186.1ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:22:37 UTC], ["updated_at", 2016-09-21 04:22:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:22:37 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (1.7ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC], ["unit_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC], ["unit_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:23:04 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 150ms (Views: 147.8ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:23:04 UTC], ["updated_at", 2016-09-21 04:23:04 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:23:04 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (124.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "city_apts_test"[0m
+  [1m[35m (342.1ms)[0m  [1m[35mCREATE DATABASE "city_apts_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "owners" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "renters" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "unit_id" integer)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_renters_on_unit_id" ON "renters" USING btree ("unit_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "units" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "owner_id" integer)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_units_on_owner_id" ON "units" USING btree ("owner_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "renters" ADD CONSTRAINT "fk_rails_fa584f0808"
+FOREIGN KEY ("unit_id")
+  REFERENCES "units" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "units" ADD CONSTRAINT "fk_rails_53e6dbc0ba"
+FOREIGN KEY ("owner_id")
+  REFERENCES "owners" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160921042331')[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160921034017'), ('20160921035410'), ('20160921040825'), ('20160921042201');
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC], ["owner_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC], ["owner_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC], ["owner_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:24:00 -0600
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC], ["unit_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:24:00 UTC], ["updated_at", 2016-09-21 04:24:00 UTC], ["unit_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:24:00 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 168ms (Views: 165.2ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:01 UTC], ["updated_at", 2016-09-21 04:24:01 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:01 UTC], ["updated_at", 2016-09-21 04:24:01 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:24:01 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC], ["owner_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC], ["owner_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC], ["owner_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:24:27 -0600
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC], ["unit_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC], ["unit_id", 12]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:24:27 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.4ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 157ms (Views: 154.8ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:27 UTC], ["updated_at", 2016-09-21 04:24:27 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:24:27 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC], ["owner_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC], ["owner_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC], ["owner_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:24:59 -0600
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC], ["unit_id", 18]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC], ["unit_id", 19]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:24:59 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 176ms (Views: 174.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:24:59 UTC], ["updated_at", 2016-09-21 04:24:59 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:24:59 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC], ["owner_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC], ["owner_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC], ["owner_id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:25:16 -0600
+Processing by OwnersController#index as HTML
+Completed 406 Not Acceptable in 30ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC], ["unit_id", 25]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC], ["unit_id", 26]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:25:16 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 174ms (Views: 171.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:25:16 UTC], ["updated_at", 2016-09-21 04:25:16 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:25:16 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC], ["owner_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC], ["owner_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC], ["owner_id", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:25:47 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 147ms (Views: 146.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC], ["unit_id", 32]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC], ["unit_id", 33]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:25:47 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.5ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:25:47 UTC], ["updated_at", 2016-09-21 04:25:47 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:25:47 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC], ["owner_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC], ["owner_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC], ["owner_id", 12]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:27:52 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC], ["unit_id", 39]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:27:52 UTC], ["updated_at", 2016-09-21 04:27:52 UTC], ["unit_id", 40]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:27:52 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 163ms (Views: 160.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:27:53 UTC], ["updated_at", 2016-09-21 04:27:53 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:27:53 UTC], ["updated_at", 2016-09-21 04:27:53 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:27:53 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:28:27 UTC], ["updated_at", 2016-09-21 04:28:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:28:27 UTC], ["updated_at", 2016-09-21 04:28:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:28:27 UTC], ["updated_at", 2016-09-21 04:28:27 UTC], ["owner_id", 13]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:28:27 UTC], ["updated_at", 2016-09-21 04:28:27 UTC], ["owner_id", 13]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:28:27 UTC], ["updated_at", 2016-09-21 04:28:27 UTC], ["owner_id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:28:27 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 13]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 14]]
+  Rendered owners/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 170ms (Views: 166.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:28:28 UTC], ["updated_at", 2016-09-21 04:28:28 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:28:28 UTC], ["updated_at", 2016-09-21 04:28:28 UTC], ["unit_id", 46]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:28:28 UTC], ["updated_at", 2016-09-21 04:28:28 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:28:28 UTC], ["updated_at", 2016-09-21 04:28:28 UTC], ["unit_id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:28:28 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:28:28 UTC], ["updated_at", 2016-09-21 04:28:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:28:28 UTC], ["updated_at", 2016-09-21 04:28:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:28:28 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:29:14 UTC], ["updated_at", 2016-09-21 04:29:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:29:14 UTC], ["updated_at", 2016-09-21 04:29:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:29:14 UTC], ["updated_at", 2016-09-21 04:29:14 UTC], ["owner_id", 15]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:29:14 UTC], ["updated_at", 2016-09-21 04:29:14 UTC], ["owner_id", 15]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:29:14 UTC], ["updated_at", 2016-09-21 04:29:14 UTC], ["owner_id", 16]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:29:14 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 15]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 16]]
+  Rendered owners/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 160ms (Views: 157.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:29:15 UTC], ["updated_at", 2016-09-21 04:29:15 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:29:15 UTC], ["updated_at", 2016-09-21 04:29:15 UTC], ["unit_id", 53]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:29:15 UTC], ["updated_at", 2016-09-21 04:29:15 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:29:15 UTC], ["updated_at", 2016-09-21 04:29:15 UTC], ["unit_id", 54]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:29:15 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:29:15 UTC], ["updated_at", 2016-09-21 04:29:15 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:29:15 UTC], ["updated_at", 2016-09-21 04:29:15 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:29:15 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC], ["owner_id", 17]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC], ["owner_id", 17]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC], ["owner_id", 18]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:29:48 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 17]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 18]]
+  Rendered owners/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 181ms (Views: 174.7ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC], ["unit_id", 60]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC], ["unit_id", 61]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:29:48 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:29:48 UTC], ["updated_at", 2016-09-21 04:29:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:29:48 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC], ["owner_id", 19]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC], ["owner_id", 19]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC], ["owner_id", 20]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:30:40 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 19]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 20]]
+  Rendered owners/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 163ms (Views: 160.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC], ["unit_id", 67]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC], ["unit_id", 68]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:30:40 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:30:40 UTC], ["updated_at", 2016-09-21 04:30:40 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:30:40 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC], ["owner_id", 21]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC], ["owner_id", 21]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC], ["owner_id", 22]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:31:08 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 21]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 22]]
+  Rendered owners/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 143ms (Views: 141.1ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC], ["unit_id", 74]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC], ["unit_id", 75]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:31:08 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:31:08 UTC], ["updated_at", 2016-09-21 04:31:08 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:31:08 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:31:16 UTC], ["updated_at", 2016-09-21 04:31:16 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:31:16 UTC], ["updated_at", 2016-09-21 04:31:16 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:31:16 UTC], ["updated_at", 2016-09-21 04:31:16 UTC], ["owner_id", 23]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:31:16 UTC], ["updated_at", 2016-09-21 04:31:16 UTC], ["owner_id", 23]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:31:16 UTC], ["updated_at", 2016-09-21 04:31:16 UTC], ["owner_id", 24]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:31:16 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 23]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 24]]
+  Rendered owners/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 142ms (Views: 140.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:31:17 UTC], ["updated_at", 2016-09-21 04:31:17 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:31:17 UTC], ["updated_at", 2016-09-21 04:31:17 UTC], ["unit_id", 81]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:31:17 UTC], ["updated_at", 2016-09-21 04:31:17 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:31:17 UTC], ["updated_at", 2016-09-21 04:31:17 UTC], ["unit_id", 82]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:31:17 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.3ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.1ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:31:17 UTC], ["updated_at", 2016-09-21 04:31:17 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:31:17 UTC], ["updated_at", 2016-09-21 04:31:17 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:31:17 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:43:14 UTC], ["updated_at", 2016-09-21 04:43:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2016-09-21 04:43:14 UTC], ["updated_at", 2016-09-21 04:43:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:43:14 UTC], ["updated_at", 2016-09-21 04:43:14 UTC], ["owner_id", 25]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:43:14 UTC], ["updated_at", 2016-09-21 04:43:14 UTC], ["owner_id", 25]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2016-09-21 04:43:14 UTC], ["updated_at", 2016-09-21 04:43:14 UTC], ["owner_id", 26]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2016-09-20 22:43:14 -0600
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 25]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 26]]
+  Rendered owners/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 163ms (Views: 160.9ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:43:15 UTC], ["updated_at", 2016-09-21 04:43:15 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2016-09-21 04:43:15 UTC], ["updated_at", 2016-09-21 04:43:15 UTC], ["unit_id", 88]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:43:15 UTC], ["updated_at", 2016-09-21 04:43:15 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2016-09-21 04:43:15 UTC], ["updated_at", 2016-09-21 04:43:15 UTC], ["unit_id", 89]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2016-09-20 22:43:15 -0600
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.4ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2016-09-21 04:43:15 UTC], ["updated_at", 2016-09-21 04:43:15 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2016-09-21 04:43:15 UTC], ["updated_at", 2016-09-21 04:43:15 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/units" for 127.0.0.1 at 2016-09-20 22:43:15 -0600
+Processing by UnitsController#index as HTML
+  Rendering units/index.html.erb within layouts/application
+  [1m[36mUnit Load (0.2ms)[0m  [1m[34mSELECT "units".* FROM "units"[0m
+  Rendered units/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m

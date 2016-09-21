@@ -1,0 +1,7 @@
+<h1>Renters</h1>
+
+<ul>
+  <% @renters.each do |renter| %>
+    <li><%= renter.first_name %> <%= renter.last_name %>: <%= renter.unit.name %></li>
+  <% end %>
+</ul>
