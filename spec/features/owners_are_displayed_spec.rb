@@ -8,7 +8,7 @@ RSpec.feature "When I visit '/owners'" do
     owner1.units.create(name: "1b")
     owner2.units.create(name: "2a")
 
-    visit '/owners'
+    visit owners_path
 
     within("#owners > li:first") do
       expect(page).to have_content("Jessica Jones")

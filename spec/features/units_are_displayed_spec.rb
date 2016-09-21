@@ -5,7 +5,7 @@ RSpec.feature "When someone visits '/units'" do
     Unit.create(name: "1a")
     Unit.create(name: "1b")
 
-    visit '/units'
+    visit units_path
 
     expect(page).to have_content("1a")
     expect(page).to have_content("1b")

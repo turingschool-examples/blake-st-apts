@@ -6,7 +6,9 @@ This repository was created as a starter project for students to implement user 
 
 Blake Street Apartments is a fictional apartment co-op building. `Units` have `owners`, and some `owners` have more than own `unit`. Each `owner` rents their apartment out to a `renter`. Not all units need currently have a `renter`. `renters` can only be created for an existing `unit`.
 
-As outlined below, some user stories have been implemented by instructors. Others will have been left for the student to implement. Students need not build user stories in order, but later user stories may build upon earlier stories. If you complete a later user story it might be the case that you will also build out some or all of the functionality from an earlier user story. Please use tests to drive development.
+As outlined below, some user stories have been implemented by instructors. Others will have been left for the student to implement. Students need not build user stories in order, but later user stories may build upon earlier stories. If you complete a later user story it might be the case that you will also build out some or all of the functionality from an earlier user story. **Please use tests to drive development. We expect a commit with a test before any implementation of a feature, and a separate commit once the feature has been implemented.**
+
+If you have questions regarding these stories, please reach out over Slack. If you want to discuss other potential user stories for additional practice, please reach out over Slack.
 
 # Blake St. Apts User Stories
 
@@ -33,7 +35,7 @@ As outlined below, some user stories have been implemented by instructors. Other
 
 #### Owners and Units
 
-* owners have_many units
+* owners has_many units
 * units belong_to owners
 
 #### Units and Renters
@@ -68,13 +70,3 @@ As outlined below, some user stories have been implemented by instructors. Other
 * their monthly rent
 * the cost per square foot that they pay
 * and the average cost per square foot for all renters
-
-### Story 4
-
-Background: an owner exists
-
-* When I visit `/units/new`
-* and I enter a unit name
-* and I select an owner from a dropdown
-* and I hit submit
-* I am shown a page with the unit name and the owner's name
